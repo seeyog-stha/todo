@@ -1,0 +1,49 @@
+{
+  "todo": [
+    {
+      "id": 1,
+      "details": "hello ",
+      "status": true
+    },
+    {
+      "id": 2,
+      "details": "hello ",
+      "status": true
+    },
+    {
+      "id": 3,
+      "details": "hello ",
+      "status": false
+    },
+    {
+      "details": "hui",
+      "status": false,
+      "id": 4
+    },
+    {
+      "details": "hui00",
+      "status": false,
+      "id": 5
+    },
+    {
+      "details": "seeyog",
+      "status": false,
+      "id": 6
+    },
+    {
+      "details": "deeya",
+      "status": false,
+      "id": 7
+    },
+    {
+      "details": "sheeya",
+      "status": false,
+      "id": 8
+    },
+    {
+      "details": "nehya",
+      "status": false,
+      "id": 9
+    }
+  ]
+}
