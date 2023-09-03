@@ -20,8 +20,8 @@ const useFetch=(url,method=null)=>{
       useEffect(() => {
         
         fetchdata(url);
-      }, [url,data.id]);
+      }, []);
       console.log(data);
-      return [data,pending,error]
+      return {data,pending,error}
 }
 export default useFetch

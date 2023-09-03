@@ -3,7 +3,7 @@ import useFetch from './useFetch';
 import Box from './Box';
 
 export default function List() {
-    const [data, pending,error]=useFetch("http://localhost:8000/todo")
+    const {data, pending,error}=useFetch("http://localhost:8000/todo")
     // console.log(data);
     const todo=data.filter((obj)=>obj.status===false)
     const completed=data.filter((obj)=>obj.status===true)
@@ -17,11 +17,11 @@ export default function List() {
 
       <div className='flex space-x-80'>
       <div className="border border-black bg-yellow-500 w-6/12">
-
+        <p className='text-3xl underline-offset-1 underline'>pending...</p>
       <Box box={todo} />
       </div>
       <div className="border border-black w-6/12">
-
+        <p className='text-3xl underline-offset-1 underline'>completed</p>
       <Box box={completed} />
       </div>
       </div>

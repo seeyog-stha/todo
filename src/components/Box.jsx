@@ -3,11 +3,14 @@ import React from 'react'
 export default function Box(props) {
     const box=props.box
     let update_post = async (e) => {
+        // console.log(e.target.id,e.target.name)
+        let idd=e.target.id
+        console.log(idd)
         let options = {
-          method: "POST",
+          method: "PUT",
           body: JSON.stringify({
-           id:e.target.id,
-           details:e.target.details,
+           id:idd,
+           details:e.target.name,
            status:true
           }),
           headers: {
@@ -15,13 +18,13 @@ export default function Box(props) {
           },
         };
          await fetch(
-          "http://localhost:8000/todo",
+         ` http://localhost:8000/todo/`+idd,
           options
         );
          }  
    
     const handelChange=(e)=>{
-        console.log("hi")
+        // console.log("hi")
         update_post(e)
     }
   return (
@@ -29,9 +32,11 @@ export default function Box(props) {
      {box.map((obj)=>(
         <div key={obj.id}>
             
-            <label htmlFor={obj.id}></label>
-            <input type="checkbox" name="" id={obj.id} checked={obj.status?"checked" : ""} onChange={handelChange} className='inline'/>
+            <label htmlFor={obj.id}>
+
+            <input type="checkbox" id={obj.id} checked={obj.status?"checked" : ""} onChange={handelChange} className='inline' name={obj.details}/>
             <p className='inline'>{obj.details}</p>
+            </label>
         </div>
      ))}
     </div>
