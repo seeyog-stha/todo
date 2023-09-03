@@ -1,8 +1,13 @@
 import React, {useState} from "react";
+import useFetch from "./useFetch";
 
 export default function Create() {
+  const {data}=useFetch("http://localhost:8000/todo")
+  // to get the max id 
+  const maxId = data.reduce((max, obj) => (obj.id > max ? obj.id : max), -Infinity);
+
   const [text, setText] = useState("");
-  const [id, setId] = useState(4);
+  const [id, setId] = useState(maxId);
   let create_post = async () => {
     let options = {
       method: "POST",
