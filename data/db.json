@@ -21,44 +21,19 @@
       "id": 4
     },
     {
-      "details": "hui00",
-      "status": false,
-      "id": 5
+      "id": 5,
+      "details": "suyog",
+      "status": false
     },
     {
       "id": 6,
-      "details": "seeyog",
+      "details": "sunaina",
       "status": true
     },
     {
-      "details": "deeya",
-      "status": false,
-      "id": 7
-    },
-    {
-      "details": "sheeya",
-      "status": false,
-      "id": 8
-    },
-    {
-      "details": "nehya",
-      "status": false,
-      "id": 9
-    },
-    {
-      "details": "sabin",
-      "status": false,
-      "id": 10
-    },
-    {
-      "details": "jabeen",
-      "status": false,
-      "id": 11
-    },
-    {
-      "details": "suyog",
-      "status": false,
-      "id": 12
+      "id": 7,
+      "details": "sushant",
+      "status": true
     }
   ]
 }
